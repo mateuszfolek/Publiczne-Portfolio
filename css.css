@@ -1,0 +1,481 @@
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+
+    /* Colors:
+    bgc: #2b2c31
+    text unactive: #7D7D80 / #9e9e9e (search)
+    text active: #cccbc9 
+    orange: #f1ae3b
+    gray: #424346
+    elements: #f1ae3b */
+
+    html body {
+        margin: 0;
+        padding: 0;
+        background-color: #2b2c31;
+        height: 100vh;
+        color: #cccbc9;
+        font-family: "Quicksand", sans-serif;
+    }
+
+    body {
+        align-items: center;
+        justify-content: center;
+        display: block;
+    }
+
+
+    /* ALL CONTENT */
+    main {
+        width: 80%;
+        height: 200vh;
+        margin: auto;
+    }
+
+    header {
+        width: 100%;
+        /* height: 5vh; */
+        background-color: #2b2c31;
+    }
+
+    nav {
+        width: 100vw;
+        height:10vh;
+        position: fixed;
+        justify-content: center;
+        display: flex;
+    }
+
+    .space-around-nav {
+        width: 40vw;
+        align-items: center;
+        justify-content: space-around;
+        display: flex;
+    }
+
+    .space-around-nav a {
+        text-decoration: none;
+        color: #cccbc9;
+        font-weight: 600;
+    }
+
+    /* Do wyszukiwarki na stronie */
+
+    /* .search-div input[type=search] {
+        background-color: #424346;
+        padding: .4rem .2rem .4rem .6rem;
+        border-radius: .3rem;
+        border: none;
+        outline: none;
+        caret-color: #cccbc9;
+        color: #9e9e9e;
+    }
+
+    input::placeholder {
+        color: #9e9e9e;
+    }
+
+    .search-div {
+        width: 30vw;
+        position: absolute;
+    } */
+
+
+    /* 
+    .burger-menu {
+        display: none;
+    }
+    .burger-menu:hover {
+        cursor: pointer;
+    } */
+
+
+    .burger-menu {
+        display: none;
+        cursor: pointer;
+        position: absolute;
+        right: 10%;
+        top: 2rem;
+    }
+
+    .burger-menu img {
+        width: 40px;
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        right: 10%;
+        top: 6rem;
+        background-color: #2b2c31;
+        border: 1px solid #424346;
+        border-radius: 8px;
+        padding: 1rem;
+        transition: color 0.3s ease;
+    }
+
+    .dropdown-menu a {
+        display: block;
+        margin: 0.5rem 0;
+        text-decoration: none;
+        color: #cccbc9;
+        font-weight: 600;
+        transition: color 0.3s ease;
+    }
+
+    .dropdown-menu a:hover {
+        color: #f1ae3b
+    }
+
+    .dropdown-menu-open {
+        transform: translateY(250px);
+        transition: transform 0.3s ease;
+    }
+
+    .shifted-content {
+        margin-top: 60px;
+        transition: margin-top 0.3s ease; 
+    }
+
+    #about, #skills, #contact {
+        width: 100%;
+        height: 100vh;
+        font-family: "Alata", sans-serif;
+        font-size: 1.3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        background-color: #2b2c31; 
+    }
+
+    #contact {
+        margin-top: 12rem;
+    }
+
+    .aboutme-text {
+        width: 30%;
+        height: auto;
+        position: absolute;
+        top: 30%;
+        left: 10%;
+        display: flex;
+        border-left: 1vh solid #f1ae3b;
+        transition: transform 0.3s ease, margin-top 0.3s ease;
+    }
+
+    .aboutme-text-style {
+        margin: .2rem 0 .2rem 2rem;
+        font-size: 1.6rem;
+    }
+
+    .aboutme-text-span-style {
+        font-size: 2.4rem;
+        color: #f1ae3b;
+    }
+
+    .aboutme-text-align {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #mateusz-photo {
+        width: 40%;
+        position: absolute;
+        align-self: center;
+        right: 10%; 
+        border-radius: 50%;
+        transition-duration: .3s;
+    }
+
+    .media-links-div {
+        width: 20vw;
+        height: 10vh;
+        align-items: center;
+        justify-content: space-around;
+        display: flex;
+        position: absolute;
+        bottom: 10%;
+        left: 10%;
+        border-bottom: .6rem solid #f1ae3b;
+    }
+
+
+    .media-link {
+        width: 5vh;
+        height: 5vh;
+        border-radius: 30%;
+        background-color: #424346;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        transition: background-color 0.3s ease;
+    }
+
+    .media-link a img {
+        width: 70%;
+        min-width: 50%;
+        max-width: 80%;
+        display: flex;
+        margin: auto;
+    }
+
+
+    .space-around-nav a {
+        color: #cccbc9;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease, border-bottom 0.3s ease;
+        z-index: 10000;
+    }
+
+    .space-around-nav a:hover, .space-around-nav a:focus {
+        color: #f1ae3b;
+        border-bottom: 2px solid #f1ae3b;
+    }
+
+    .media-link:hover {
+        background-color: #f1ae3b;
+        transition: background-color 0.3s ease;
+    }
+
+    #mateusz-photo:hover {
+        transform: scale(1.1);
+        transition: transform 0.5s ease;
+        transition-duration: .3s;
+    }
+
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .part_1, .aboutme-text, #mateusz-photo, .media-links-div {
+        animation: fadeIn 1s ease-in;
+        opacity: 0;
+        animation-fill-mode: forwards;
+    }
+
+    .skills-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin: 2rem 0;
+    }
+
+    .skills {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100px;
+    }
+
+    .skills img {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 0.5rem;
+        transition: transform 0.3s ease;
+    }
+
+    .skills img:hover {
+        transform: scale(1.2);
+    }
+
+    #skills {
+        width: 100%;
+        padding: 2rem 0;
+        text-align: center;
+        margin-top: 30rem;
+    }
+
+    #skills h2 {
+        color: #f1ae3b;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    .skill-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 2rem 0;
+        flex-wrap: wrap;
+    }
+
+    .skill-row-reverse {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: 2rem 0;
+        flex-wrap: wrap;
+    }
+    .skill-text {
+        width: 45%;
+        text-align: left;
+        color: #cccbc9;
+    }
+
+    .skill-text h3 {
+        color: #f1ae3b;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .skill-text p {
+        line-height: 1.6rem;
+        font-size: 1rem;
+    }
+
+    .skill-image {
+        width: 45%;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .skill-image img {
+        width: 100%;
+        max-width: 150px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease;
+    }
+
+    .skill-image img:hover {
+        transform: scale(1.1);
+    }
+
+    #skills h2, #contact h2 {
+        color: #f1ae3b;
+        margin-bottom: 1rem;
+    }
+
+    #skills ul, #contact p {
+        color: #cccbc9;
+        line-height: 1.8rem;
+
+    }
+
+
+    @media (max-width: 968px) {
+        .aboutme-text {
+            width: 80%;
+            top: 8%;
+            left: 10%;
+            border-left: .4rem solid #f1ae3b;
+        }
+
+        #mateusz-photo {
+            width: 50%;
+            position: inherit;
+            margin: 2rem auto;
+            border-radius: 50%;
+        }
+
+        .media-links-div {
+            width: 70%;
+            bottom: 5%;
+            left: 15%;
+        }
+
+        .aboutme-text-style {
+            font-size: 1.4rem;
+        }
+
+        .aboutme-text-span-style {
+            font-size: 2rem;
+        }
+    }
+
+
+    @media (max-width: 768px) {
+        .aboutme-text {
+            width: 90%;
+            top: 5%;
+            left: 5%;
+        }
+
+        #mateusz-photo {
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        .media-links-div {
+            width: 80%;
+            left: 10%;
+        }
+        .space-around-nav {
+            display: none;
+        }
+
+        .burger-menu {
+            display: block;
+        }
+        .skill-row {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .skill-row-reverse {
+            flex-direction: column-reverse;
+        }
+
+        .skill-text, .skill-image {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .skill-text {
+            width: 80%;
+        }
+    }
+
+    @media (max-width: 425px) {
+        .aboutme-text {
+            width: 90%;
+            top: 10%;
+            left: 5%;
+            border-left: .4rem solid #f1ae3b;
+            transition: transform 0.3s ease;
+        }
+
+        #mateusz-photo {
+            width: 80%;
+            margin: 1rem auto;
+            position: static;
+        }
+
+        .aboutme-text-style {
+            font-size: 1.2rem;
+        }
+
+        .aboutme-text-span-style {
+            font-size: 1.8rem;
+        }
+
+        .dropdown-menu-open .aboutme-text {
+            transform: translateY(50px);
+        }
+        .skill-text h3 {
+            font-size: 1.4rem; /* Zmniejszenie tytułu umiejętności */
+        }
+    
+        .skill-text p {
+            font-size: 0.9rem; /* Zmniejszenie opisu */
+        }
+    
+        .skill-image img {
+            max-width: 120px; /* Zmniejszenie obrazów dla najmniejszych urządzeń */
+        }
+    }
