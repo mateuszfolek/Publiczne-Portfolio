@@ -134,7 +134,7 @@
     }
 
     .shifted-content {
-        margin-top: 60px;
+        /* margin-top: 60px; */
         transition: margin-top 0.3s ease; 
     }
 

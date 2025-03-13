@@ -26,4 +26,5 @@ function toggleMenu() {
         aboutSection.classList.add("dropdown-menu-open");
         mainContent.classList.add("shifted-content");
     }
+    
 }
