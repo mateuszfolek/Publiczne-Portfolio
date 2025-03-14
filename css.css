@@ -125,6 +125,10 @@
         transition: transform 0.3s ease;
     }
 
+    .dropdown-menu a:hover {
+        color: #f1ae3b;
+    }
+
     .shifted-content {
         transition: margin-top 0.3s ease; 
     }
@@ -201,7 +205,7 @@
     .media-link {
         width: 5vh;
         height: 5vh;
-        border-radius: 30%;
+        border-radius: .6rem;
         background-color: #424346;
         align-items: center;
         justify-content: center;
@@ -364,8 +368,16 @@
     #skills ul, #contact p {
         color: #cccbc9;
         line-height: 1.8rem;
-
     }
+
+
+    /* h2 {
+        padding: 20px 30px;
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        border-radius: 1rem;
+    } */
 
 
     @media (max-width: 968px) {
@@ -399,14 +411,27 @@
         .aboutme-text-span-style {
             font-size: 2rem;
         }
+        nav {
+        background: rgba(0, 0, 0, 0.0);
+        backdrop-filter: blur(0px);
+        -webkit-backdrop-filter: blur(0px);
+        }
+
+        #about {
+            padding-top: 5rem;
+        }
+        .media-link {
+            width: 6vh;
+            height: 6vh;
+        }
     }
 
 
     @media (max-width: 768px) {
         .aboutme-text {
-            width: 90%;
+            width: 80%;
             top: 10%;
-            left: 5%;
+            left: 10%;
         }
 
         #mateusz-photo {
@@ -449,6 +474,15 @@
             width: 80%;
         }
 
+        #menu {
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 10px;
+            z-index: 100000;
+        }
+
     }
 
     @media (max-width: 425px) {
@@ -459,6 +493,10 @@
             transition: transform 0.3s ease;
         }
 
+        .more-aboutme {
+         margin: 1rem;
+        }
+
         #mateusz-photo {
             width: 80%;
             margin: 1rem auto;
@@ -467,6 +505,7 @@
 
         .aboutme-text-style {
             font-size: 1.2rem;
+            margin-left: 1.6rem;
         }
 
         .aboutme-text-span-style {
