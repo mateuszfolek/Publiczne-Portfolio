@@ -14,7 +14,7 @@
         margin: 0;
         padding: 0;
         background-color: #2b2c31;
-        height: 100vh;
+        /* height: 100vh; */
         color: #cccbc9;
         font-family: "Quicksand", sans-serif;
     }
@@ -28,8 +28,8 @@
 
     /* ALL CONTENT */
     main {
-        width: 80%;
-        height: 200vh;
+        width: 90%;
+        display: block;
         margin: auto;
     }
 
@@ -45,6 +45,9 @@
         position: fixed;
         justify-content: center;
         display: flex;
+        /* background-color: #2b2c31; */
+        /* background-color:rgba(0, 0, 0, 0.3); */
+        z-index: 100000;
     }
 
     .space-around-nav {
@@ -81,14 +84,6 @@
         position: absolute;
     } */
 
-
-    /* 
-    .burger-menu {
-        display: none;
-    }
-    .burger-menu:hover {
-        cursor: pointer;
-    } */
 
 
     .burger-menu {
@@ -134,13 +129,11 @@
     }
 
     .shifted-content {
-        /* margin-top: 60px; */
         transition: margin-top 0.3s ease; 
     }
 
     #about, #skills, #contact {
         width: 100%;
-        height: 100vh;
         font-family: "Alata", sans-serif;
         font-size: 1.3rem;
         display: flex;
@@ -149,11 +142,9 @@
         align-items: center;
         text-align: left;
         background-color: #2b2c31; 
+        min-height: 100vh;
     }
 
-    #contact {
-        margin-top: 12rem;
-    }
 
     .aboutme-text {
         width: 30%;
@@ -161,8 +152,7 @@
         position: absolute;
         top: 30%;
         left: 10%;
-        display: flex;
-        border-left: 1vh solid #f1ae3b;
+        display: block;
         transition: transform 0.3s ease, margin-top 0.3s ease;
     }
 
@@ -179,6 +169,14 @@
     .aboutme-text-align {
         display: flex;
         flex-direction: column;
+        border-left: 1vh solid #f1ae3b;
+    }
+
+    .more-aboutme {
+        font-size: 1.1rem;
+        width: 100%;
+        color: #89898b;
+        margin: 0 0 0 2rem;
     }
 
     #mateusz-photo {
@@ -292,12 +290,6 @@
         transform: scale(1.2);
     }
 
-    #skills {
-        width: 100%;
-        padding: 2rem 0;
-        text-align: center;
-        margin-top: 30rem;
-    }
 
     #skills h2 {
         color: #f1ae3b;
@@ -308,8 +300,9 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin: 2rem 0;
+        margin: 4rem 0;
         flex-wrap: wrap;
+        max-width: 60%;
     }
 
     .skill-row-reverse {
@@ -317,7 +310,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        margin: 2rem 0;
+        margin: 4rem 0;
         flex-wrap: wrap;
     }
     .skill-text {
@@ -347,8 +340,10 @@
         width: 100%;
         max-width: 150px;
         height: auto;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        border-radius: .3rem;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+        background-color:rgba(255, 255, 255, 1);
+        padding: 5px;
         transition: transform 0.3s ease;
     }
 
@@ -373,14 +368,17 @@
             width: 80%;
             top: 8%;
             left: 10%;
-            border-left: .4rem solid #f1ae3b;
+            position: inherit;
         }
 
         #mateusz-photo {
-            width: 50%;
+            /* width: 50%; */
             position: inherit;
-            margin: 2rem auto;
+            left: 30%;
+            /* margin: 5rem auto; */
+            justify-self: auto;
             border-radius: 50%;
+            /* align-self: center; */
         }
 
         .media-links-div {
@@ -402,18 +400,22 @@
     @media (max-width: 768px) {
         .aboutme-text {
             width: 90%;
-            top: 5%;
+            top: 10%;
             left: 5%;
         }
 
         #mateusz-photo {
             width: 70%;
             margin: 0 auto;
+            position: static;
+            margin: 2rem auto;
+            display: block;
         }
 
         .media-links-div {
             width: 80%;
             left: 10%;
+            position: inherit;
         }
         .space-around-nav {
             display: none;
@@ -425,10 +427,12 @@
         .skill-row {
             flex-direction: column;
             align-items: center;
+            margin: 2rem 0;
         }
 
         .skill-row-reverse {
             flex-direction: column-reverse;
+            margin: 2rem 0;
         }
 
         .skill-text, .skill-image {
@@ -439,6 +443,7 @@
         .skill-text {
             width: 80%;
         }
+
     }
 
     @media (max-width: 425px) {
@@ -446,7 +451,6 @@
             width: 90%;
             top: 10%;
             left: 5%;
-            border-left: .4rem solid #f1ae3b;
             transition: transform 0.3s ease;
         }
 
@@ -468,14 +472,15 @@
             transform: translateY(50px);
         }
         .skill-text h3 {
-            font-size: 1.4rem; /* Zmniejszenie tytułu umiejętności */
+            font-size: 1.4rem;
         }
     
         .skill-text p {
-            font-size: 0.9rem; /* Zmniejszenie opisu */
+            font-size: 0.9rem;
         }
     
         .skill-image img {
-            max-width: 120px; /* Zmniejszenie obrazów dla najmniejszych urządzeń */
+            max-width: 120px;
         }
+
     }
