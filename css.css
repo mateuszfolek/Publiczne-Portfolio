@@ -45,8 +45,9 @@
         position: fixed;
         justify-content: center;
         display: flex;
-        /* background-color: #2b2c31; */
-        /* background-color:rgba(0, 0, 0, 0.3); */
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
         z-index: 100000;
     }
 
@@ -117,10 +118,6 @@
         color: #cccbc9;
         font-weight: 600;
         transition: color 0.3s ease;
-    }
-
-    .dropdown-menu a:hover {
-        color: #f1ae3b
     }
 
     .dropdown-menu-open {
@@ -229,14 +226,19 @@
         z-index: 10000;
     }
 
-    .space-around-nav a:hover, .space-around-nav a:focus {
+    .space-around-nav a:hover  {
         color: #f1ae3b;
-        border-bottom: 2px solid #f1ae3b;
+        border-bottom: 1px solid #f1ae3b;
+    }
+    .space-around-nav a:focus {
+        color: #f1ae3b;
+        transition: color .5s ease;
+        border-bottom: 3px solid #f1ae3b;
     }
 
     .media-link:hover {
         background-color: #f1ae3b;
-        transition: background-color 0.3s ease;
+        /* transition: background-color 0.3s ease; */
     }
 
     #mateusz-photo:hover {
@@ -291,7 +293,7 @@
     }
 
     #skills {
-        padding-top: 5rem;
+        padding-top: 7.5rem;
     }
 
     #skills h2 {

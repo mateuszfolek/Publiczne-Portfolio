@@ -1,8 +1,8 @@
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function(e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute("href"));
-        target.scrollIntoView({
+        const aTarget = document.querySelector(this.getAttribute("href"));
+        aTarget.scrollIntoView({
             behavior: "smooth",
             block: "start"
         });
@@ -28,3 +28,16 @@ function toggleMenu() {
     }
     
 }
+
+// FIX THIS
+
+// document.querySelectorAll('skill-image').forEach(anchor => {
+//     anchor.addEventListener("click", function(e) {
+//         e.preventDefault();
+//         const bTarget = document.querySelector(this.getAttribute("div"));
+//         bTarget.scrollIntoView({
+//             behavior: "smooth",
+//             block: "start"
+//         });
+//     });
+// });
