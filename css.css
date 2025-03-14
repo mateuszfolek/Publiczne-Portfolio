@@ -290,6 +290,9 @@
         transform: scale(1.2);
     }
 
+    #skills {
+        padding-top: 5rem;
+    }
 
     #skills h2 {
         color: #f1ae3b;
