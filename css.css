@@ -40,7 +40,7 @@
 
     nav {
         width: 100vw;
-        height: 10vh;
+        height: 6rem;
         position: fixed;
         justify-content: center;
         display: flex;
@@ -51,7 +51,7 @@
     }
 
     .space-around-nav {
-        width: 40vw;
+        width: 48rem;
         align-items: center;
         justify-content: space-around;
         display: flex;
@@ -129,7 +129,7 @@
         width: 30%;
         height: auto;
         position: absolute;
-        top: 30%;
+        top: 25%;
         left: 10%;
         display: block;
         transition: transform 0.3s ease, margin-top 0.3s ease;
@@ -152,7 +152,7 @@
     .aboutme-text-align {
         display: flex;
         flex-direction: column;
-        border-left: 1vh solid #f1ae3b;
+        border-left: 0.675rem solid #f1ae3b;
     }
 
     .more-aboutme {
@@ -172,21 +172,21 @@
     }
 
     .media-links-div {
-        width: 20vw;
-        height: 10vh;
+        width: 24rem;
+        height: 6.75rem;
         align-items: center;
         justify-content: space-around;
         display: flex;
         position: absolute;
-        bottom: 10%;
+        bottom: 15%;
         left: 10%;
         border-bottom: .6rem solid #f1ae3b;
     }
 
 
     .media-link {
-        width: 5vh;
-        height: 5vh;
+        width: 3.3rem;
+        height: 3.3rem;
         border-radius: .6rem;
         background-color: #424346;
         align-items: center;
@@ -232,7 +232,6 @@
         transition: transform 0.5s ease;
         transition-duration: .3s;
     }
-
 
     @keyframes fadeIn {
         0% {
@@ -298,7 +297,7 @@
         justify-content: space-between;
         margin: 4rem 0;
         flex-wrap: wrap;
-        max-width: 60%;
+        width: 60%;
     }
 
     .skill-row-reverse {
@@ -308,6 +307,8 @@
         justify-content: space-between;
         margin: 4rem 0;
         flex-wrap: wrap;
+        width: 70%;
+
     }
 
     .skill-text {
@@ -360,17 +361,17 @@
         line-height: 1.8rem;
     }
 
-    @media (min-width:969px) and (max-width: 1280px) {
+    @media (min-width:961px) and (max-width: 1280px) {
         .aboutme-text-style {
-            width: 40vw;
+            width: 24rem;
         }
 
-        .aboutme-text {
-            top: 25%;
+        .media-links-div {
+            bottom: 10%;
         }
     }
 
-    @media (max-width: 968px) {
+    @media (max-width: 960px) {
         .aboutme-text {
             width: 80%;
             top: 8%;
@@ -401,15 +402,20 @@
             font-size: 2rem;
         }
 
-        nav {
-            background: rgba(0, 0, 0, 0.0);
-            backdrop-filter: blur(0px);
-            -webkit-backdrop-filter: blur(0px);
+        #contact {
+            min-height: 80vh;
         }
 
-        .media-link {
-            width: 6vh;
-            height: 6vh;
+        #about {
+            padding-top: 6rem;
+        }
+
+        .skill-row {
+            width: 80%;
+        }
+
+        .skill-row-reverse {
+            width: 90%;
         }
     }
 
@@ -481,7 +487,21 @@
         }
 
         #about {
+            padding-top: 4rem;
+        }
+
+        #skills {
             padding-top: 5rem;
+        }
+
+        #contact {
+            min-height: 60vh;
+        }
+
+        nav {
+            background: rgba(0, 0, 0, 0.0);
+            backdrop-filter: blur(0px);
+            -webkit-backdrop-filter: blur(0px);
         }
     }
 
@@ -526,5 +546,9 @@
 
         .skill-image img {
             max-width: 120px;
+        }
+        
+        #skills {
+            padding-top: 2rem;
         }
     }
