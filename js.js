@@ -8,20 +8,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 function toggleMenu() {
     const dropdown = document.querySelector(".dropdown-menu");
-    const aboutSection = document.querySelector("#about");
-    const mainContent = document.querySelector("main");
+    const ShiftSection = document.querySelector("#main");
     const isMenuOpen = dropdown.style.display === "block";
+    const dropdownLink = document.querySelector(".dropdown-a");
 
     if (isMenuOpen) {
         dropdown.style.display = "none";
-        document.body.style.overflow = "auto";
-        aboutSection.classList.remove("dropdown-menu-open");
-        mainContent.classList.remove("shifted-content");
+        ShiftSection.classList.remove("dropdown-menu-open");
     } else {
         dropdown.style.display = "block";
-        document.body.style.overflow = "hidden";
-        aboutSection.classList.add("dropdown-menu-open");
-        mainContent.classList.add("shifted-content");
+        ShiftSection.classList.add("dropdown-menu-open");
     }
-    
-}
+
+    document.querySelectorAll(".dropdown-menu .dropdown-a").forEach(option => {
+        option.addEventListener("click", function() {
+            dropdown.style.display = "none";         
+        });
+    });
+};

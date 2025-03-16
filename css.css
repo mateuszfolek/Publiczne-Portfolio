@@ -57,12 +57,6 @@
         display: flex;
     }
 
-    .space-around-nav a {
-        text-decoration: none;
-        color: #cccbc9;
-        font-weight: 600;
-    }
-
     .burger-menu {
         display: none;
         cursor: pointer;
@@ -91,13 +85,13 @@
         display: block;
         margin: 0.5rem 0;
         text-decoration: none;
-        color: #cccbc9;
+        color: #b1f579;
         font-weight: 600;
         transition: color 0.3s ease;
     }
 
     .dropdown-menu-open {
-        transform: translateY(250px);
+        transform: translateY(12rem);
         transition: transform 0.3s ease;
     }
 
@@ -113,8 +107,8 @@
     #skills,
     #contact {
         width: 100%;
-        font-family: "Alata", sans-serif;
         font-size: 1.3rem;
+        font-weight: 500;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -207,20 +201,18 @@
     .space-around-nav a {
         color: #cccbc9;
         text-decoration: none;
-        font-weight: 600;
-        transition: color 0.3s ease, border-bottom 0.3s ease;
         z-index: 10000;
+        font-weight: 600;
     }
 
     .space-around-nav a:hover {
-        color: #f1ae3b;
-        border-bottom: 1px solid #f1ae3b;
+        color: #b1f579;
+        font-weight: 600;
+        border-bottom: 1px solid #b1f579;
     }
 
     .space-around-nav a:focus {
         color: #b1f579;
-        transition: color .4s ease;
-        border-bottom: 3px solid #b1f579;
     }
 
     .media-link:hover {
@@ -285,9 +277,10 @@
         padding-top: 7.5rem;
     }
 
-    #skills h2 {
+    #h2 {
         color: #f1ae3b;
         font-size: 2rem;
+        font-weight: 900;
         margin-bottom: 2rem;
     }
 
@@ -337,7 +330,7 @@
         width: 100%;
         max-width: 150px;
         height: auto;
-        border-radius: .6rem;
+        border-radius: .3rem;
         background: #ffffff;
         box-shadow:  12px 12px 10px #000000;
         padding: 5px;
@@ -348,14 +341,13 @@
         transform: scale(1.1);
     }
 
-    #skills h2,
-    #contact h2 {
+    #h2 {
         color: #f1ae3b;
         margin-bottom: 1rem;
     }
 
     #skills ul,
-    #contact p {
+    #contact {
         color: #cccbc9;
         line-height: 1.8rem;
     }
@@ -472,12 +464,11 @@
             padding: 10px;
             background: rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
             border-radius: 10px;
             z-index: 100000;
         }
 
-        h2 {
+        #h2 {
             padding: 20px 30px;
             background: rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(4px);
@@ -504,7 +495,7 @@
         }
     }
 
-    @media (max-width: 425px) {
+    @media (max-width: 520px) {
         .aboutme-text {
             width: 90%;
             top: 10%;
@@ -515,6 +506,13 @@
         .more-aboutme {
             margin: 1rem;
         }
+        
+        #about {
+            padding-top: 6rem;
+        }
+    }
+
+    @media (max-width: 425px) {
 
         #mateusz-photo {
             width: 80%;
@@ -531,10 +529,6 @@
             font-size: 1.8rem;
         }
 
-        .dropdown-menu-open .aboutme-text {
-            transform: translateY(50px);
-        }
-
         .skill-text h3 {
             font-size: 1.4rem;
         }
@@ -549,5 +543,9 @@
         
         #skills {
             padding-top: 2rem;
+        }
+
+        #h2 {
+            font-size: 1.5rem;
         }
     }
