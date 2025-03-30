@@ -26,3 +26,20 @@ function toggleMenu() {
         });
     });
 };
+
+
+
+const elements = document.querySelectorAll('h2, .skill-row, .skill-row-reverse');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            observer.unobserve(entry.target);
+        }
+    });
+});
+
+elements.forEach(element => {
+    observer.observe(element);
+});

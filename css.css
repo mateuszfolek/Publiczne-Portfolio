@@ -549,3 +549,16 @@
             font-size: 1.5rem;
         }
     }
+
+
+
+    h2, .skill-row, .skill-row-reverse {
+        opacity: 0;
+        transform: scale(0.5);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    
+    .fade-in {
+        opacity: 1;
+        transform: scale(1);
+    }
