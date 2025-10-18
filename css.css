@@ -63,7 +63,7 @@
 
     .dropdown-menu {
         display: none;
-        position:fixed;
+        position: fixed;
         z-index: 10000000;
         right: 10%;
         top: 6rem;
@@ -121,11 +121,11 @@
         transition: transform 0.3s ease, margin-top 0.3s ease;
     }
 
-.about-layout {
-    width: 100%;
-    display: flex;
-    flex: 1 1 45%;
-}
+    .about-layout {
+        width: 100%;
+        display: flex;
+        flex: 1 1 45%;
+    }
 
 
 
@@ -158,12 +158,13 @@
     }
 
     #mateusz-photo {
-        width: 40%;
+        max-width: 450px;
         position: absolute;
         align-self: center;
         right: 10%;
-        border-radius: 50%;
         transition-duration: .3s;
+        border-radius: 50%;
+        border: 3px solid #dfdedb;
     }
 
     .media-links-div {
@@ -390,9 +391,8 @@
         }
 
         #mateusz-photo {
-            width: 70%;
-            position: static;
-            display: block;
+            box-sizing: border-box;
+            max-width: 80%;
         }
 
         .media-links-div {
@@ -463,40 +463,34 @@
             display: none;
         }
 
-    @media (max-width: 425px) {
+        @media (max-width: 425px) {
 
-        #mateusz-photo {
-            width: 80%;
-            margin: 1rem auto;
-            position: static;
-        }
+            .aboutme-text-style {
+                font-size: 1.2rem;
+            }
 
-        .aboutme-text-style {
-            font-size: 1.2rem;
-        }
+            .aboutme-text-span-style {
+                font-size: 1.8rem;
+            }
 
-        .aboutme-text-span-style {
-            font-size: 1.8rem;
-        }
+            .skill-text h3 {
+                font-size: 1.4rem;
+            }
 
-        .skill-text h3 {
-            font-size: 1.4rem;
-        }
+            .skill-text p {
+                font-size: 0.9rem;
+            }
 
-        .skill-text p {
-            font-size: 0.9rem;
-        }
+            .skill-image img {
+                max-width: 120px;
+            }
 
-        .skill-image img {
-            max-width: 120px;
-        }
+            #skills {
+                padding-top: 2rem;
+            }
 
-        #skills {
-            padding-top: 2rem;
-        }
-
-        #h2 {
-            font-size: 1.5rem;
+            #h2 {
+                font-size: 1.5rem;
+            }
         }
     }
-}
