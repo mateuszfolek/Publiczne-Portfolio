@@ -6,11 +6,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     };
 });
 
-function toggleMenu() {
+BurgerIcon = document.getElementById("burger");
+BurgerIcon.addEventListener('click', function() {
     const dropdown = document.querySelector(".dropdown-menu");
     const ShiftSection = document.querySelector("#main");
     const isMenuOpen = dropdown.style.display === "block";
-    const dropdownLink = document.querySelector(".dropdown-a");
 
     if (isMenuOpen) {
         dropdown.style.display = "none";
@@ -19,18 +19,18 @@ function toggleMenu() {
         dropdown.style.display = "block";
         ShiftSection.classList.add("dropdown-menu-open");
     }
+    ShiftSection.classList.add("dropdown-menu-anim");
 
     document.querySelectorAll(".dropdown-menu .dropdown-a").forEach(option => {
         option.addEventListener("click", function() {
-            dropdown.style.display = "none";         
+            dropdown.style.display = "none";
+            ShiftSection.classList.remove("dropdown-menu-open");
         });
     });
-};
-
+})
 
 
 const elements = document.querySelectorAll('h2, .skill-row, .skill-row-reverse');
-
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {

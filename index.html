@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="pl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Witaj!</title>
     <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="animations.css">
     <script src="js.js" defer></script>
 </head>
-
 <body>
-
     <header>
         <nav>
             <div class="space-around-nav">
@@ -18,34 +16,99 @@
                 <a href="#skills">Umiejętności</a>
                 <a href="#contact">Kontakt</a>
             </div>
-            <div class="burger-menu" onclick="toggleMenu()">
-                <img src="menu-icon.png" alt="Menu Icon" id="menu">
+           
+        </nav>
+         <div class="burger-menu" id="burger">
+                <img src="assets/images/menu-icon.png" alt="Menu Icon" id="menu">
             </div>
             <div class="dropdown-menu">
                 <a href="#about" class="dropdown-a">O mnie</a>
                 <a href="#skills" class="dropdown-a">Umiejętności</a>
                 <a href="#contact" class="dropdown-a">Kontakt</a>
             </div>
-        </nav>
     </header>
 
     <main id="main">
         <section id="about">
+
+            <!-- <div class="about-layout">
+
+
+<div class="aboutme-text">
+                <div class="ABOUT">
+                    <p class="ABOUT-TEXT">Jestem <span class="ABOUT-SPAN">Mateusz Folek</span></p>
+                    <p class="ABOUT-TEXT">Początkujący programista stron internetowych HTML, CSS oraz
+                        JavaScript!</p>
+                </div>
+                <div class="more-aboutme">
+                    <p>Uczeń PZS1 w Pszczynie. Mam 17 lat, posiadam umiejętności tworzenia stron internetowych przy
+                        użyciu <span class="language-color">HTML</span>, <span class="language-color">CSS</span>, <span
+                            class="language-color">JavaScript</span>, <span class="language-color">PHP</span> oraz
+                        potrafię stworzyć prostą stronę przy użyciu <span class="language-color">WordPress'a</span>.
+                        Znam także podstawowy oraz zastosowania <span class="language-color">C++</span> i <span
+                            class="language-color">Pythona</span>. Obecnie skupiam się na nauce 2 języków, które dopiero
+                        poznaje. Są to: <span class="language-color">C#</span> oraz <span
+                            class="language-color">Java</span>. Dbam o
+                        stały samorozwój oraz poszerzanie wiedzy w zakresie technologicznym! </p>
+                </div>
+            </div>
+
+            <img src="assets/images/me.png" alt="Moje zdjęcie - Mateusz Folek" id="mateusz-photo">
+            <div class="media-links-div">
+                <div class="media-link"><a href="https://github.com/mateuszfolek" target="_blank"><img
+                            src="assets/images/github-icon.png" alt="GitHub Icon"></a></div>
+                <div class="media-link"><a href="https://m.me/MateuszFolek08" target="_blank"><img
+                            src="assets/images/messenger-icon.png" alt="Messenger Icon"></a></div>
+                <div class="media-link"><a href="mailto:mfolek59@gmail.com" target="_blank"><img
+                            src="assets/images/gmail-icon.png" alt="Gmail Icon"></a></div>
+            </div>
+
+                
+
+
+
+
+
+
+
+            </div> -->
+
             <div class="aboutme-text">
                 <div class="aboutme-text-align">
                     <p class="aboutme-text-style">Jestem <span class="aboutme-text-span-style">Mateusz Folek</span></p>
-                    <p class="aboutme-text-style">Początkujący programista stron internetowych HTML, CSS oraz JavaScript!</p>
+                    <p class="aboutme-text-style">Początkujący programista stron internetowych HTML, CSS oraz
+                        JavaScript!</p>
                 </div>
                 <div class="more-aboutme">
-                    <p>Uczeń PZS1 w Pszczynie. Mam 16 lat, posiadam umiejętności tworzenia stron internetowych przy użyciu <span class="language-color">HTML</span>, <span class="language-color">CSS</span>, <span class="language-color">JavaScript</span>, <span class="language-color">PHP</span> oraz użycie systemu <span class="language-color">WordPress</span>. Poznaje także języki konsolowe takie jak <span class="language-color">C++</span>, <span class="language-color">C#</span> i <span class="language-color">Python</span>. Dbam o stały samorozwój oraz poszerzanie wiedzy w zakresie technologicznym! </p>
+                    <p>Uczeń PZS1 w Pszczynie. Mam 17 lat, posiadam umiejętności tworzenia stron internetowych przy
+                        użyciu <span class="language-color">HTML</span>, <span class="language-color">CSS</span>, <span
+                            class="language-color">JavaScript</span>, <span class="language-color">PHP</span> oraz
+                        potrafię stworzyć prostą stronę przy użyciu <span class="language-color">WordPress'a</span>.
+                        Znam także podstawowy oraz zastosowania <span class="language-color">C++</span> i <span
+                            class="language-color">Pythona</span>. Obecnie skupiam się na nauce 2 języków, które dopiero
+                        poznaje. Są to: <span class="language-color">C#</span> oraz <span
+                            class="language-color">Java</span>. Dbam o
+                        stały samorozwój oraz poszerzanie wiedzy w zakresie technologicznym! </p>
                 </div>
             </div>
-            <img src="me.png" alt="Moje zdjęcie" id="mateusz-photo">
+
+
+
+            <img src="assets/images/me.png" alt="Moje zdjęcie - Mateusz Folek" id="mateusz-photo">
             <div class="media-links-div">
-                <div class="media-link"><a href="https://github.com/mateuszfolek" target="_blank"><img src="github-icon.png" alt="GitHub Icon"></a></div>
-                <div class="media-link"><a href="https://m.me/MateuszFolek08" target="_blank"><img src="messenger-icon.png" alt="Messenger Icon"></a></div>
-                <div class="media-link"><a href="mailto:mfolek59@gmail.com" target="_blank"><img src="gmail-icon.png" alt="Gmail Icon"></a></div>
+                <div class="media-link"><a href="https://github.com/mateuszfolek" target="_blank"><img
+                            src="assets/images/github-icon.png" alt="GitHub Icon"></a></div>
+                <div class="media-link"><a href="https://m.me/MateuszFolek08" target="_blank"><img
+                            src="assets/images/messenger-icon.png" alt="Messenger Icon"></a></div>
+                <div class="media-link"><a href="mailto:mfolek59@gmail.com" target="_blank"><img
+                            src="assets/images/gmail-icon.png" alt="Gmail Icon"></a></div>
             </div>
+
+
+
+
+
+
         </section>
 
         <section id="skills">
@@ -56,12 +119,12 @@
                     <p>HTML - jako podstawowy język struktury treści na stronach internetowych.</p>
                 </div>
                 <div class="skill-image">
-                    <img src="html.webp" alt="HTML Icon">
+                    <img src="assets/images/html.webp" alt="HTML Icon">
                 </div>
             </div>
             <div class="skill-row-reverse">
                 <div class="skill-image">
-                    <img src="css3.png" alt="CSS Icon">
+                    <img src="assets/images/css3.png" alt="CSS Icon">
                 </div>
                 <div class="skill-text">
                     <h3>CSS3</h3>
@@ -71,40 +134,44 @@
             <div class="skill-row">
                 <div class="skill-text">
                     <h3>JavaScript</h3>
-                    <p>JavaScript - odpowiadający za dynamiczny język do tworzenia interaktywnych funkcji i aplikacji.</p>
+                    <p>JavaScript - odpowiadający za dynamiczny język do tworzenia interaktywnych funkcji i aplikacji.
+                    </p>
                 </div>
                 <div class="skill-image">
-                    <img src="js.png" alt="JavaScript Icon">
+                    <img src="assets/images/js.png" alt="JavaScript Icon">
                 </div>
             </div>
             <div class="skill-row-reverse">
                 <div class="skill-image">
-                    <img src="gitgithub.png" alt="Git Icon" style="padding: 20px;"!important>
+                    <img src="assets/images/gitgithub.png" alt="Git Icon" style="padding: 20px;" !important>
                 </div>
                 <div class="skill-text">
                     <h3>Git + GitHub</h3>
-                    <p>Git + GitHub - do obsługi narzędzi do zarządzania i przechowywania kodeu źródłowego i współpracy w zespołach.</p>
+                    <p>Git + GitHub - do obsługi narzędzi do zarządzania i przechowywania kodeu źródłowego i współpracy
+                        w zespołach.</p>
                 </div>
             </div>
             <div class="skill-row">
                 <div class="skill-text">
                     <h3>PHP</h3>
-                    <p>PHP - o charakterze skryptowym do tworzenia dynamicznych stron internetowych, działający po stronie serwera.</p>
+                    <p>PHP - o charakterze skryptowym do tworzenia dynamicznych stron internetowych, działający po
+                        stronie serwera.</p>
                 </div>
                 <div class="skill-image">
-                    <img src="PHP.png" alt="PHP Icon" style="padding: 20px;"!important>
+                    <img src="assets/images/PHP.png" alt="PHP Icon" style="padding: 20px;" !important>
                 </div>
             </div>
             <div class="skill-row-reverse">
                 <div class="skill-image">
-                    <img src="wordpress.png" alt="WordPress Icon" style="padding: 10px;"!important>
+                    <img src="assets/images/wordpress.png" alt="WordPress Icon" style="padding: 10px;" !important>
                 </div>
                 <div class="skill-text">
                     <h3>WordPress</h3>
-                    <p>WordPress - odnośnie tworzenia i zarządzania stronami internetowymi, oferujący łatwe dostosowanie dzięki motywom i wtyczkom.</p>
+                    <p>WordPress - odnośnie tworzenia i zarządzania stronami internetowymi, oferujący łatwe dostosowanie
+                        dzięki motywom i wtyczkom.</p>
                 </div>
             </div>
-            
+
         </section>
 
         <section id="contact">

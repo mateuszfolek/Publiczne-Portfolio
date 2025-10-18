@@ -1,23 +1,21 @@
     @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
 
-
     /* Colors:
-    background: #2b2c31
-    text: #cccbc9 
+    text: # 
     text (secondary color): #89898b
     active components (+border): #424346
-    orange: #f1ae3b
-    lime green: #b1f579
-    soft green: #8df13b
-    text unactive (not used): #7D7D80 */
+     */
 
     html body {
         margin: 0;
         padding: 0;
-        background-color: #2b2c31;
-        color: #cccbc9;
+        background: #1e225a;
+        background: radial-gradient(circle, rgb(17, 18, 39) 0%, rgb(25, 35, 65) 100%);
+        background-repeat: repeat;
+        color: #dfdedb;
         font-family: "Quicksand", sans-serif;
+        scroll-behavior: smooth;
     }
 
     body {
@@ -26,16 +24,10 @@
         display: block;
     }
 
-    /* ALL CONTENT */
-    main {
-        width: 90%;
-        display: block;
-        margin: auto;
-    }
 
+    /* ALL CONTENT */
     header {
         width: 100%;
-        background-color: #2b2c31;
     }
 
     nav {
@@ -47,7 +39,7 @@
         background: rgba(0, 0, 0, 0.3);
         backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
-        z-index: 100000;        
+        z-index: 100000;
     }
 
     .space-around-nav {
@@ -59,22 +51,23 @@
 
     .burger-menu {
         display: none;
-        cursor: pointer;
-        position: absolute;
-        right: 10%;
-        top: 2rem;
+        position: fixed;
+        right: 30px;
+        top: 30px;
+        z-index: 10000000;
     }
 
     .burger-menu img {
-        width: 40px;
+        width: 32px;
     }
 
     .dropdown-menu {
         display: none;
-        position: absolute;
+        position:fixed;
+        z-index: 10000000;
         right: 10%;
         top: 6rem;
-        background-color: #2b2c31;
+        background-color: #17161d;
         border: 1px solid #424346;
         border-radius: 8px;
         padding: 1rem;
@@ -85,39 +78,38 @@
         display: block;
         margin: 0.5rem 0;
         text-decoration: none;
-        color: #b1f579;
+        color: #ffb462;
         font-weight: 600;
         transition: color 0.3s ease;
     }
 
     .dropdown-menu-open {
         transform: translateY(12rem);
+    }
+
+    .dropdown-menu-anim {
         transition: transform 0.3s ease;
     }
 
     .dropdown-menu a:hover {
-        color: #f1ae3b;
-    }
-
-    .shifted-content {
-        transition: margin-top 0.3s ease;
+        color: #ffb462;
     }
 
     #about,
     #skills,
     #contact {
-        width: 100%;
         font-size: 1.3rem;
         font-weight: 500;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        text-align: left;
-        background-color: #2b2c31;
         min-height: 100vh;
     }
 
+    #skills {
+        background-color: #17161d;
+    }
 
     .aboutme-text {
         width: 30%;
@@ -129,30 +121,39 @@
         transition: transform 0.3s ease, margin-top 0.3s ease;
     }
 
+.about-layout {
+    width: 100%;
+    display: flex;
+    flex: 1 1 45%;
+}
+
+
+
     .aboutme-text-style {
         margin: .2rem 0 .2rem 2rem;
         font-size: 1.6rem;
+        color: #fff;
     }
 
     .aboutme-text-span-style {
         font-size: 2.4rem;
-        color: #f1ae3b;
+        color: #0fe2db;
     }
 
     .language-color {
-        color: #8df13b;
+        color: #ffb462;
     }
 
     .aboutme-text-align {
         display: flex;
         flex-direction: column;
-        border-left: 0.675rem solid #f1ae3b;
+        border-left: 0.675rem solid #0fe2db;
     }
 
     .more-aboutme {
         font-size: 1.1rem;
         width: 100%;
-        color: #89898b;
+        color: #9f9faa;
         margin: 0 0 0 2rem;
     }
 
@@ -174,7 +175,7 @@
         position: absolute;
         bottom: 15%;
         left: 10%;
-        border-bottom: .6rem solid #f1ae3b;
+        border-bottom: .6rem solid #0fe2db;
     }
 
 
@@ -206,42 +207,17 @@
     }
 
     .space-around-nav a:hover {
-        color: #b1f579;
+        color: #ffb462;
         font-weight: 600;
-        border-bottom: 1px solid #b1f579;
+        border-bottom: 1px solid #ffb462;
     }
 
     .space-around-nav a:focus {
-        color: #b1f579;
+        color: #ffb462;
     }
 
     .media-link:hover {
-        background-color: #f1ae3b;
-    }
-
-    #mateusz-photo:hover {
-        transform: scale(1.1);
-        transition: transform 0.5s ease;
-        transition-duration: .3s;
-    }
-
-    @keyframes fadeIn {
-        0% {
-            opacity: 0;
-        }
-
-        100% {
-            opacity: 1;
-        }
-    }
-
-    .part_1,
-    .aboutme-text,
-    #mateusz-photo,
-    .media-links-div {
-        animation: fadeIn 1s ease-in;
-        opacity: 0;
-        animation-fill-mode: forwards;
+        background-color: #2c5c5a;
     }
 
     .skills-container {
@@ -278,7 +254,7 @@
     }
 
     #h2 {
-        color: #f1ae3b;
+        color: #ffb462;
         font-size: 2rem;
         font-weight: 900;
         margin-bottom: 2rem;
@@ -310,7 +286,7 @@
     }
 
     .skill-text h3 {
-        color: #f1ae3b;
+        color: #0fe2db;
         font-size: 1.5rem;
         margin-bottom: 1rem;
     }
@@ -332,18 +308,13 @@
         height: auto;
         border-radius: .3rem;
         background: #ffffff;
-        box-shadow:  12px 12px 10px #000000;
+        box-shadow: 12px 12px 10px #000000;
         padding: 5px;
         transition: transform 0.3s ease;
     }
 
     .skill-image img:hover {
         transform: scale(1.1);
-    }
-
-    #h2 {
-        color: #f1ae3b;
-        margin-bottom: 1rem;
     }
 
     #skills ul,
@@ -462,7 +433,7 @@
 
         #menu {
             padding: 10px;
-            background: rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.5);
             backdrop-filter: blur(20px);
             border-radius: 10px;
             z-index: 100000;
@@ -489,28 +460,8 @@
         }
 
         nav {
-            background: rgba(0, 0, 0, 0.0);
-            backdrop-filter: blur(0px);
-            -webkit-backdrop-filter: blur(0px);
+            display: none;
         }
-    }
-
-    @media (max-width: 520px) {
-        .aboutme-text {
-            width: 90%;
-            top: 10%;
-            left: 5%;
-            transition: transform 0.3s ease;
-        }
-
-        .more-aboutme {
-            margin: 1rem;
-        }
-        
-        #about {
-            padding-top: 6rem;
-        }
-    }
 
     @media (max-width: 425px) {
 
@@ -522,7 +473,6 @@
 
         .aboutme-text-style {
             font-size: 1.2rem;
-            margin-left: 1.6rem;
         }
 
         .aboutme-text-span-style {
@@ -540,7 +490,7 @@
         .skill-image img {
             max-width: 120px;
         }
-        
+
         #skills {
             padding-top: 2rem;
         }
@@ -549,16 +499,4 @@
             font-size: 1.5rem;
         }
     }
-
-
-
-    h2, .skill-row, .skill-row-reverse {
-        opacity: 0;
-        transform: scale(0.5);
-        transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-    
-    .fade-in {
-        opacity: 1;
-        transform: scale(1);
-    }
+}

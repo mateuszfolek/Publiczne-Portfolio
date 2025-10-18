@@ -1,0 +1,39 @@
+@keyframes contentFade {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+        filter: blur(6px);
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+@keyframes slideDownBlur {
+    from {
+        transform: translateY(8px);
+        opacity: 0;
+        filter: blur(8px);
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+.skill-image,
+.skill-text {
+    animation: slideDownBlur 1s ease forwards;
+}
+
+.part_1,
+.aboutme-text,
+#mateusz-photo,
+.media-links-div {
+    animation: contentFade 1.3s ease forwards;
+}
