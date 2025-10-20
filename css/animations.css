@@ -1,0 +1,36 @@
+@keyframes contentFade {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+        filter: blur(6px);
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+.-aboutme-content,
+#mateuszfolek {
+    animation: contentFade 1.3s ease forwards;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateX(-10rem) scale(0.95);
+  animation: fadeInSoft 0.8s ease-out forwards;
+}
+
+@keyframes fadeInSoft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    filter: blur(0);
+  }
+}
