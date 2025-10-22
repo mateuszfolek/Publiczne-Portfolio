@@ -43,3 +43,9 @@ const observer = new IntersectionObserver(entries => {
 elements.forEach(element => {
     observer.observe(element);
 });
+
+
+disclaimer = document.getElementById("overlay");
+disclaimer.addEventListener('click', function(){
+    disclaimer.classList.add("overlay-alternative")
+});

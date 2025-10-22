@@ -262,3 +262,10 @@ nav {
     border-radius: 20px;
     font-style: italic;
 }
+.overlay:hover {
+    cursor: pointer;
+}
+
+.overlay-alternative{ 
+    display: none;
+}
