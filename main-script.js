@@ -6,6 +6,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     };
 });
 
+// Nav links ^
+
 BurgerIcon = document.getElementById("burger");
 BurgerIcon.addEventListener('click', function() {
     const dropdown = document.querySelector(".dropdown-menu");
@@ -45,7 +47,22 @@ elements.forEach(element => {
 });
 
 
+
+// Temporary:
+
 disclaimer = document.getElementById("overlay");
 disclaimer.addEventListener('click', function(){
     disclaimer.classList.add("overlay-alternative")
 });
+
+
+const linkedin = document.getElementById("linkedin");
+const label = document.getElementById("linkedin-label");
+
+linkedin.addEventListener('mouseover', function(){
+    label.style.display = "flex";
+});
+
+linkedin.addEventListener('mouseout', function(){
+    label.style.display = "none";
+})

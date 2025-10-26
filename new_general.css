@@ -202,6 +202,29 @@ nav {
     margin: 10px;
 }
 
+.links {
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    /* position: relative; */
+    /* justify-self: end; */
+    /* align-self: center; */
+    border-bottom: .6rem solid #0fe2db;
+}
+
+.social-link img {
+    max-width: 48px;
+    margin: 15px;
+    padding: 12px;
+    border-radius: 20px 5px 20px 5px;
+    transition-duration: .3s;
+}
+
+.social-link img:hover {
+    background-color: #17161d;
+    transition-duration: .3s;
+}
+
 
 
 @media (max-width: 1280px){
@@ -237,6 +260,12 @@ nav {
         width: 90%;
         box-sizing: border-box;
     }
+
+    #h2 {
+    padding: 20px 30px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    }
 }
 
 
@@ -247,7 +276,7 @@ nav {
 
 
 
-
+/* Temporary: */
 
 
 
@@ -268,4 +297,12 @@ nav {
 
 .overlay-alternative{ 
     display: none;
+}
+
+#linkedin-label {
+    display: none;
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+    color: ;
 }
