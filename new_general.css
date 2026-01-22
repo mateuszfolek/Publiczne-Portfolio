@@ -107,8 +107,12 @@ nav {
 
 /* HTML body header nav ^ */
 
-
-
+h1 {
+    color: #ffb462;
+    font-size: clamp(1.6rem, 1.8rem, 2rem);
+    font-weight: 900;
+    margin-bottom: 2rem;
+}
 
 #skills,
 #contact {
@@ -130,18 +134,61 @@ nav {
     align-items: center;
 }
 
-#skills {
-    background-color: #17161d;
+.skills-page {
+    max-width: clamp(50vw, 60vw, 90vw);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.certain-skillset-section {
+    width: 100%;
+    padding: 3rem;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.section-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.cards {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(45vw, 1fr));
+}
+
+.card {
+    background: #f9fafb23;
+    border-radius: 10px;
+    border: 3px solid #f9fafb;
+    margin: 20px 10px;
+    padding: 50px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all .3s ease-out;
+    opacity: -1;
+}
+
+.card-image {
+    max-width: 192px;
+}
+
+.card-title {
+    margin: 30px auto 0 auto;
 }
 
 /* Sekcje ^ */
 
-
-
 .-about-layout {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-around; */
 }
 
 .about-workspace-content {
@@ -168,12 +215,9 @@ nav {
     color: #ffb462;
 }
 
-
-
 .-aboutme-text-style {
     margin: 0;
     font-size: 1.6rem;
-    /* color: #fff; */
 }
 
 .-aboutme-text-span-style {
@@ -188,11 +232,7 @@ nav {
     margin: 0;
 }
 
-
-
-
-
-.-media-links{
+.-media-links {
     display: flex;
     margin: 30px;
 }
@@ -206,14 +246,11 @@ nav {
     align-items: center;
     justify-content: space-around;
     display: flex;
-    /* position: relative; */
-    /* justify-self: end; */
-    /* align-self: center; */
     border-bottom: .6rem solid #0fe2db;
 }
 
 .social-link img {
-    max-width: 48px;
+    max-width: 36px;
     margin: 15px;
     padding: 12px;
     border-radius: 20px 5px 20px 5px;
@@ -225,28 +262,24 @@ nav {
     transition-duration: .3s;
 }
 
-
-
-@media (max-width: 1280px){
-        .about-workspace-content {
-            display: flex;
-            flex-direction: column-reverse;
-            padding: 5rem;
-        }
+@media (max-width: 1280px) {
+    .about-workspace-content {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 5rem;
+    }
 }
 
-
-
-@media (max-width: 768px){
+@media (max-width: 768px) {
 
     #about {
         margin-top: 3rem;
     }
 
     .burger-menu {
-            display: block;
-        }
-        
+        display: block;
+    }
+
     nav {
         display: none;
     }
@@ -261,25 +294,35 @@ nav {
         box-sizing: border-box;
     }
 
-    #h2 {
-    padding: 20px 30px;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 12px;
+    h1 {
+        padding: 20px 30px;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 12px;
+    }
+}
+
+@media (max-width: 575px){
+    .card-image {
+    max-width: 128px;
+}
+}
+
+/* Skills cols clamps */
+
+@media (min-width:768px) and (max-width: 1280px) {
+    .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1280px) {
+    .cards {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
 
 
-
-
-
-
-
-
-
 /* Temporary: */
-
-
-
 .overlay {
     position: fixed;
     bottom: 0%;
@@ -287,22 +330,18 @@ nav {
     justify-self: center;
     padding: 10px 20px;
     margin: 20px auto;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 20px;
     font-style: italic;
+    transition-duration: .3s;
 }
+
 .overlay:hover {
     cursor: pointer;
+    background-color: #000;
+    transition-duration: .3s;
 }
 
-.overlay-alternative{ 
+.overlay-alternative {
     display: none;
-}
-
-#linkedin-label {
-    display: none;
-    position: fixed;
-    bottom: 10%;
-    right: 10%;
-    color: ;
 }

@@ -32,7 +32,7 @@ BurgerIcon.addEventListener('click', function() {
 })
 
 
-const elements = document.querySelectorAll('h2, .skill-row, .skill-row-reverse');
+const elements = document.querySelectorAll('h2, .card');
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -56,13 +56,14 @@ disclaimer.addEventListener('click', function(){
 });
 
 
-const linkedin = document.getElementById("linkedin");
-const label = document.getElementById("linkedin-label");
+// const cards = document.querySelectorAll('.card');
 
-linkedin.addEventListener('mouseover', function(){
-    label.style.display = "flex";
-});
+// cards.forEach(card => {
+//   card.addEventListener('mouseover', function () {
+//     this.classList.add('hover')
+//     console.log('works');
+//   });
+// });
 
-linkedin.addEventListener('mouseout', function(){
-    label.style.display = "none";
-})
+
+// to be fixed

@@ -36,7 +36,7 @@
 
 #h2 {
     color: #ffb462;
-    font-size: 2rem;
+    font-size: clamp(1.6rem, 1.8rem, 2rem);
     font-weight: 900;
     margin-bottom: 2rem;
 }
@@ -103,10 +103,11 @@
     line-height: 1.8rem;
 }
 
+.social-link img {
+    width: 36px;
+}
 
 @media (max-width: 960px) {
-
-
     .skill-row {
         width: 80%;
     }
@@ -115,7 +116,6 @@
         width: 90%;
     }
 }
-
 
 @media (max-width: 768px) {
     .skill-row {
@@ -148,13 +148,9 @@
         z-index: 100000;
     }
 
-
-
-
     #skills {
         padding-top: 5rem;
     }
-
 
     @media (max-width: 425px) {
 
@@ -173,8 +169,8 @@
         #skills {
             padding-top: 2rem;
         }
-
     }
 }
+
 
 

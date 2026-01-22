@@ -19,8 +19,9 @@
 
 .fade-in {
   opacity: 0;
-  transform: translateX(-10rem) scale(0.95);
-  animation: fadeInSoft 0.8s ease-out forwards;
+  transform: translateX(-4rem) scale(0.6);
+  animation: fadeInSoft 1.1s ease-out forwards;
+  opacity: 1;
 }
 
 @keyframes fadeInSoft {
@@ -33,4 +34,11 @@
     transform: translateX(0) scale(1);
     filter: blur(0);
   }
+}
+
+
+.hover {
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.18);
+    transform: translateY(-5px);
+    transition: all .3s ease-out;
 }
